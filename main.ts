@@ -5,6 +5,9 @@ import { resolvers } from "./resolvers.ts";
 import { schema } from "./schema.ts";
 import { RestaurantModel } from "./type.ts";
 
+//No funciona las variables de entorno en deno deploy
+
+
 const MONGO_URL = Deno.env.get("MONGO_URL");
 
 if (!MONGO_URL) {

@@ -10,8 +10,8 @@ export const schema = `
 
 
     type Query{
-        getRestaurant: (id: ID!): Restaurant
-        getRestaurants: (city: String!): Restaurant
+        getRestaurant (id: ID!): Restaurant
+        getRestaurants (city: String!): Restaurant
     }
 
 
