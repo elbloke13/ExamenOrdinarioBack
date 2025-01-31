@@ -2,8 +2,10 @@
   "version": "4",
   "specifiers": {
     "npm:@apollo/server@^4.11.2": "4.11.2_graphql@16.10.0",
+    "npm:graphql@^16.10.0": "16.10.0",
     "npm:graphql@^16.9.0": "16.10.0",
-    "npm:mongodb@^6.12.0": "6.12.0"
+    "npm:mongodb@^6.12.0": "6.12.0",
+    "npm:mongodb@^6.13.0": "6.13.0"
   },
   "npm": {
     "@apollo/cache-control-types@1.0.3_graphql@16.10.0": {
@@ -604,6 +606,14 @@
         "mongodb-connection-string-url"
       ]
     },
+    "mongodb@6.13.0": {
+      "integrity": "sha512-KeESYR5TEaFxOuwRqkOm3XOsMqCSkdeDMjaW5u2nuKfX7rqaofp7JQGoi7sVqQcNJTKuveNbzZtWMstb8ABP6Q==",
+      "dependencies": [
+        "@mongodb-js/saslprep",
+        "bson",
+        "mongodb-connection-string-url"
+      ]
+    },
     "ms@2.0.0": {
       "integrity": "sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A=="
     },
@@ -831,6 +841,12 @@
       "npm:@apollo/server@^4.11.2",
       "npm:graphql@^16.9.0",
       "npm:mongodb@^6.12.0"
-    ]
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:graphql@^16.10.0",
+        "npm:mongodb@^6.13.0"
+      ]
+    }
   }
 }

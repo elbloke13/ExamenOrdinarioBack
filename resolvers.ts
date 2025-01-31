@@ -1,5 +1,5 @@
 import { Collection , ObjectId} from "mongodb";
-import { RestaurantModel, APIClima , APITime, APIPhone} from "./type.ts";
+import { RestaurantModel, APIPhone} from "./type.ts";
 import { GraphQLError } from "graphql";
 
 
@@ -16,7 +16,7 @@ type deleteMutationArgs = {
 }
 
 type getRestaurantsQueryArgs = {
-    name:string,
+    city:string,
 }
 
 type getRestaurantQueryArgs = {
@@ -38,11 +38,8 @@ export const resolvers = {
     Query: {
 
         getRestaurants: async (_: unknown , RestCtx: RestaurantCtx, args: getRestaurantsQueryArgs): Promise <RestaurantModel[]> => {
-            const res = await RestCtx.RestaurantCollection.find({name: args.name}).toArray();
+            const res = await RestCtx.RestaurantCollection.find({city: args.city}).toArray();
             return res;
-        },
-        getRestaurant: async (_:unknown, ctx: RestaurantCtx, args: getRestaurantQueryArgs): Promise< RestaurantModel | null> => {
-            return null;
         }
 
     },
