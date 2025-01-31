@@ -6,12 +6,11 @@ export type RestaurantModel = OptionalId<{
     direction: string,
     city: string,
     phone: string
-}>
+}>;
 
-
+//https://api.api-ninjas.com/v1/validatephone
 export type APIPhone = {
-    is_valid: boolean,
-    country: string
+    is_valid: boolean
 }
 
 //https://api.api-ninjas.com/v1/weather

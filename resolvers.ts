@@ -1,4 +1,4 @@
-import { Collection , OptionalId , ObjectId} from "mongodb";
+import { Collection , ObjectId} from "mongodb";
 import { RestaurantModel, APIClima , APITime, APIPhone} from "./type.ts";
 import { GraphQLError } from "graphql";
 
