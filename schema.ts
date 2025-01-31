@@ -11,7 +11,7 @@ export const schema = `
 
     type Query{
         getRestaurant: (id: ID!): Restaurant
-        getRestaurants: [Restaurant!]!
+        getRestaurants: (city: String!): Restaurant
     }
 
 
